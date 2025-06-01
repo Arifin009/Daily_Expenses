@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStart">
+    <FrameLayout
+        android:id="@+id/man"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/layer"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/man"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="100dp"
+             android:gravity="center_horizontal"
+            android:layout_gravity="bottom"
+            android:text="Spend Smarter Save more"
+            android:textColor="#438883"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+<Button
+    android:id="@+id/start"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/man"
+    android:text="Get Start"
+    android:layout_marginHorizontal="25dp"
+    android:layout_marginTop="30dp"
+    android:backgroundTint="#438883"/>
+</RelativeLayout>
