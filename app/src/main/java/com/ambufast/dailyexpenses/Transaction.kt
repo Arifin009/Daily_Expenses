@@ -1,4 +1,4 @@
-package com.example.dailyexpenses
+package com.ambufast.dailyexpenses
 
 data class Transaction(
     val category: String?,

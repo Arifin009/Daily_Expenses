@@ -1,39 +1,76 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp"
-    android:background="@android:color/white"
-    android:elevation="2dp">
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E6E8EC"
+    android:backgroundTint="@android:color/white">
 
-    <!-- Title -->
-    <TextView
-        android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Groceries"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:textColor="@android:color/black" />
+        android:padding="14dp">
 
-    <!-- Date below title -->
-    <TextView
-        android:id="@+id/textDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textTitle"
-        android:layout_marginTop="2dp"
-        android:text="May 25, 2025"
-        android:textSize="12sp"
-        android:textColor="@android:color/darker_gray" />
+        <!-- Icon (optional) -->
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_category"
+            android:contentDescription="@null"
+            app:tint="#1F615C"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-    <!-- Amount on right side -->
-    <TextView
-        android:id="@+id/textAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:text="+$500"
-        android:textStyle="bold"
-        android:textSize="16sp" />
-</RelativeLayout>
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Groceries"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/imgIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textAmount" />
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="May 25, 2025"
+            android:textSize="12sp"
+            android:textColor="#6B7280"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/imgIcon"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+            app:layout_constraintEnd_toStartOf="@id/textAmount" />
+
+        <!-- Amount (right) -->
+        <TextView
+            android:id="@+id/textAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ ৳500"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1F615C"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

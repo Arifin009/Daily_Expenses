@@ -1,4 +1,4 @@
-package com.example.dailyexpenses
+package com.ambufast.dailyexpenses
 
 import android.content.ContentValues
 import android.content.Context

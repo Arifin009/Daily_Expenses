@@ -1,4 +1,4 @@
-package com.example.dailyexpenses
+package com.ambufast.dailyexpenses
 
 import android.content.Intent
 import android.view.LayoutInflater

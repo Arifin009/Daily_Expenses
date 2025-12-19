@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.dailyexpenses"
+    namespace = "com.ambufast.dailyexpenses"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.dailyexpenses"
+        applicationId = "com.ambufast.dailyexpenses"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
